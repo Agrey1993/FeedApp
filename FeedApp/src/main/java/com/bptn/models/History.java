@@ -7,15 +7,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "\"History\"")
-
 public class History {
+
     @Id
     @Column(name = "\"postID\"")
-    private String postID;
-
+    private String postId;
 
     @Column(name = "\"usernameKey\"")
-    private String usernameKey;
+    private String username;
 
     @Column(name = "\"date\"")
     private String date;
@@ -26,62 +25,58 @@ public class History {
     @Column(name = "\"postUpload\"")
     private String postUpload;
 
+	public History() {
+		super();
+	}
 
-    //  constructors
-    public History() {
-        super();
-    }
+	public History(String postId, String username, String date, String postType, String postUpload) {
+		super();
+		this.postId = postId;
+		this.username = username;
+		this.date = date;
+		this.postType = postType;
+		this.postUpload = postUpload;
+	}
 
-    //  parameterized constructors
-    public History(String postID, String usernameKey, String date, String postType, String postUpload) {
-        this.postID = postID;
-        this.usernameKey = usernameKey;
-        this.date = date;
-        this.postType = postType;
-        this.postUpload = postUpload;
-    }
+	public String getPostId() {
+		return postId;
+	}
 
+	public void setPostId(String postId) {
+		this.postId = postId;
+	}
 
-    //        getters
-    public String getPostID() {
-        return postID;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public String getUsernameKey() {
-        return usernameKey;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getDate() {
-        return date;
-    }
+	public String getDate() {
+		return date;
+	}
 
-    public String getPostType() {
-        return postType;
-    }
+	public void setDate(String date) {
+		this.date = date;
+	}
 
-    public String getPostUpload() {
-        return postUpload;
-    }
+	public String getPostType() {
+		return postType;
+	}
 
-    //    setters
-    public void setPostID(String postID) {
-        this.postID = postID;
-    }
+	public void setPostType(String postType) {
+		this.postType = postType;
+	}
 
-    public void setUsernameKey(String usernameKey) {
-        this.usernameKey = usernameKey;
-    }
+	public String getPostUpload() {
+		return postUpload;
+	}
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+	public void setPostUpload(String postUpload) {
+		this.postUpload = postUpload;
+	}
 
-    public void setPostType(String postType) {
-        this.postType = postType;
-    }
-
-    public void setPostUpload(String postUpload) {
-        this.postUpload = postUpload;
-    }
-
+    
 }

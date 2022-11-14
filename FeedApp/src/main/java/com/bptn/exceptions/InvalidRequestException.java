@@ -1,30 +1,25 @@
 package com.bptn.exceptions;
 
-public class InvalidPostException extends Exception {
+public class InvalidRequestException extends Exception {
 
-	public InvalidPostException() {
+	public InvalidRequestException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public InvalidPostException(String message, Throwable cause) {
+	public InvalidRequestException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public InvalidPostException(String message) {
+	public InvalidRequestException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public InvalidPostException(Throwable cause) {
+	public InvalidRequestException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-
-
-	
-	
-	
 
 }

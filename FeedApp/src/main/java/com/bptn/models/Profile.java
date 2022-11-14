@@ -7,139 +7,140 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "\"Profile\"")
-
 public class Profile {
 
-    @Column(name = "\"position\"")
+    @Column(name = "\"position\"" )
     private String position;
 
-    @Column(name = "\"company\"")
+    @Column(name = "\"company\"" )
     private String company;
 
-    @Column(name = "\"companyAddresss\"")
-    private String companyAddresss;
+    @Column(name = "\"companyAddress\"" )
+    private String companyaddress;
 
-    @Column(name = "\"interests\"")
+    @Column(name = "\"interests\"" )
     private String interests;
 
-    @Column(name = "\"experience\"")
+    @Column(name = "\"experience\"" )
     private String experience;
 
-    @Column(name = "\"education\"")
+    @Column(name = "\"education\"" )
     private String education;
 
-    @Column(name = "\"certification\"")
+    @Column(name = "\"certification\"" )
     private String certification;
 
-    @Column(name = "\"skills\"")
+    @Column(name = "\"skills\"" )
     private String skills;
 
-    @Column(name = "\"languages\"")
+    @Column(name = "\"languages\"" )
     private String languages;
+
     @Id
-    @Column(name = "\"usernameKey\"")
-    private String usernameKey;
+    @Column(name = "\"usernameKey\"" )
+    private String username;
 
+	public Profile() {
+		super();
+	}
 
-    //    constructors
-    public Profile() {
-        super();
-    }
+	public Profile(String position, String company, String companyaddress, String interests, String experience,
+			String education, String certification, String skills, String languages, String username) {
+		super();
+		this.position = position;
+		this.company = company;
+		this.companyaddress = companyaddress;
+		this.interests = interests;
+		this.experience = experience;
+		this.education = education;
+		this.certification = certification;
+		this.skills = skills;
+		this.languages = languages;
+		this.username = username;
+	}
 
-    //  parameterized constructors
-    public Profile(String position, String company, String companyAddresss, String interests, String experience, String education, String certification, String skills, String languages, String usernameKey) {
-        this.position = position;
-        this.company = company;
-        this.companyAddresss = companyAddresss;
-        this.interests = interests;
-        this.experience = experience;
-        this.education = education;
-        this.certification = certification;
-        this.skills = skills;
-        this.languages = languages;
-        this.usernameKey = usernameKey;
-    }
+	public String getPosition() {
+		return position;
+	}
 
-    //    getters
-    public String getPosition() {
-        return position;
-    }
+	public void setPosition(String position) {
+		this.position = position;
+	}
 
-    public String getCompany() {
-        return company;
-    }
+	public String getCompany() {
+		return company;
+	}
 
-    public String getCompanyAddresss() {
-        return companyAddresss;
-    }
+	public void setCompany(String company) {
+		this.company = company;
+	}
 
-    public String getInterests() {
-        return interests;
-    }
+	public String getCompanyaddress() {
+		return companyaddress;
+	}
 
-    public String getExperience() {
-        return experience;
-    }
+	public void setCompanyaddress(String companyaddress) {
+		this.companyaddress = companyaddress;
+	}
 
-    public String getEducation() {
-        return education;
-    }
+	public String getInterests() {
+		return interests;
+	}
 
-    public String getCertification() {
-        return certification;
-    }
+	public void setInterests(String interests) {
+		this.interests = interests;
+	}
 
-    public String getSkills() {
-        return skills;
-    }
+	public String getExperience() {
+		return experience;
+	}
 
-    public String getLanguages() {
-        return languages;
-    }
+	public void setExperience(String experience) {
+		this.experience = experience;
+	}
 
-    public String getUsernameKey() {
-        return usernameKey;
-    }
+	public String getEducation() {
+		return education;
+	}
 
-//    setters
+	public void setEducation(String education) {
+		this.education = education;
+	}
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
+	public String getCertification() {
+		return certification;
+	}
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
+	public void setCertification(String certification) {
+		this.certification = certification;
+	}
 
-    public void setCompanyAddresss(String companyAddresss) {
-        this.companyAddresss = companyAddresss;
-    }
+	public String getSkills() {
+		return skills;
+	}
 
-    public void setInterests(String interests) {
-        this.interests = interests;
-    }
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
 
-    public void setExperience(String experience) {
-        this.experience = experience;
-    }
+	public String getLanguages() {
+		return languages;
+	}
 
-    public void setEducation(String education) {
-        this.education = education;
-    }
+	public void setLanguages(String languages) {
+		this.languages = languages;
+	}
 
-    public void setCertification(String certification) {
-        this.certification = certification;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setSkills(String skills) {
-        this.skills = skills;
-    }
-
-    public void setLanguages(String languages) {
-        this.languages = languages;
-    }
-
-    public void setUsernameKey(String usernameKey) {
-        this.usernameKey = usernameKey;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
+    
+    
+    
+    
+    
 }

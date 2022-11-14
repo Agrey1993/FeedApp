@@ -1,30 +1,25 @@
 package com.bptn.exceptions;
 
-public class InvalidPostException extends Exception {
+public class InvalidImageMetaData extends Exception {
 
-	public InvalidPostException() {
+	public InvalidImageMetaData() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public InvalidPostException(String message, Throwable cause) {
+	public InvalidImageMetaData(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public InvalidPostException(String message) {
+	public InvalidImageMetaData(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public InvalidPostException(Throwable cause) {
+	public InvalidImageMetaData(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
-
-
-	
-	
-	
 
 }

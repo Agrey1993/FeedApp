@@ -7,7 +7,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "\"AuthenticationUser\"")
-
 public class AuthenticationUser {
 
     @Column(name = "\"userPassword\"")
@@ -38,96 +37,97 @@ public class AuthenticationUser {
     @Column(name = "\"usernameKey\"")
     private String usernameKey;
 
+	public AuthenticationUser() {
+		super();
+	}
 
-    //  constructors
-    public AuthenticationUser() {
-        super();
-    }
+	public AuthenticationUser(String userPassword, String phoneNumber, String securityQuestion1,
+			String securityQuestion2, String securityQuestion3, String securityAnswer1, String securityAnswer2,
+			String securityAnswer3, String usernameKey) {
+		super();
+		this.userPassword = userPassword;
+		this.phoneNumber = phoneNumber;
+		this.securityQuestion1 = securityQuestion1;
+		this.securityQuestion2 = securityQuestion2;
+		this.securityQuestion3 = securityQuestion3;
+		this.securityAnswer1 = securityAnswer1;
+		this.securityAnswer2 = securityAnswer2;
+		this.securityAnswer3 = securityAnswer3;
+		this.usernameKey = usernameKey;
+	}
 
-    //  parameterized constructors
-    public AuthenticationUser(String userPassword, String phoneNumber, String securityQuestion1, String securityQuestion2, String securityQuestion3, String securityAnswer1, String securityAnswer2, String securityAnswer3, String usernameKey) {
-        this.userPassword = userPassword;
-        this.phoneNumber = phoneNumber;
-        this.securityQuestion1 = securityQuestion1;
-        this.securityQuestion2 = securityQuestion2;
-        this.securityQuestion3 = securityQuestion3;
-        this.securityAnswer1 = securityAnswer1;
-        this.securityAnswer2 = securityAnswer2;
-        this.securityAnswer3 = securityAnswer3;
-        this.usernameKey = usernameKey;
-    }
+	public String getUserPassword() {
+		return userPassword;
+	}
 
-    //    getters
-    public String getUserPassword() {
-        return userPassword;
-    }
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
 
-    public String getSecurityQuestion1() {
-        return securityQuestion1;
-    }
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 
-    public String getSecurityQuestion2() {
-        return securityQuestion2;
-    }
+	public String getSecurityQuestion1() {
+		return securityQuestion1;
+	}
 
-    public String getSecurityQuestion3() {
-        return securityQuestion3;
-    }
+	public void setSecurityQuestion1(String securityQuestion1) {
+		this.securityQuestion1 = securityQuestion1;
+	}
 
-    public String getSecurityAnswer1() {
-        return securityAnswer1;
-    }
+	public String getSecurityQuestion2() {
+		return securityQuestion2;
+	}
 
-    public String getSecurityAnswer2() {
-        return securityAnswer2;
-    }
+	public void setSecurityQuestion2(String securityQuestion2) {
+		this.securityQuestion2 = securityQuestion2;
+	}
 
-    public String getSecurityAnswer3() {
-        return securityAnswer3;
-    }
+	public String getSecurityQuestion3() {
+		return securityQuestion3;
+	}
 
-    public String getUsernameKey() {
-        return usernameKey;
-    }
+	public void setSecurityQuestion3(String securityQuestion3) {
+		this.securityQuestion3 = securityQuestion3;
+	}
 
-    //    setters
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
+	public String getSecurityAnswer1() {
+		return securityAnswer1;
+	}
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+	public void setSecurityAnswer1(String securityAnswer1) {
+		this.securityAnswer1 = securityAnswer1;
+	}
 
-    public void setSecurityQuestion1(String securityQuestion1) {
-        this.securityQuestion1 = securityQuestion1;
-    }
+	public String getSecurityAnswer2() {
+		return securityAnswer2;
+	}
 
-    public void setSecurityQuestion2(String securityQuestion2) {
-        this.securityQuestion2 = securityQuestion2;
-    }
+	public void setSecurityAnswer2(String securityAnswer2) {
+		this.securityAnswer2 = securityAnswer2;
+	}
 
-    public void setSecurityQuestion3(String securityQuestion3) {
-        this.securityQuestion3 = securityQuestion3;
-    }
+	public String getSecurityAnswer3() {
+		return securityAnswer3;
+	}
 
-    public void setSecurityAnswer1(String securityAnswer1) {
-        this.securityAnswer1 = securityAnswer1;
-    }
+	public void setSecurityAnswer3(String securityAnswer3) {
+		this.securityAnswer3 = securityAnswer3;
+	}
 
-    public void setSecurityAnswer2(String securityAnswer2) {
-        this.securityAnswer2 = securityAnswer2;
-    }
+	public String getUsernameKey() {
+		return usernameKey;
+	}
 
-    public void setSecurityAnswer3(String securityAnswer3) {
-        this.securityAnswer3 = securityAnswer3;
-    }
+	public void setUsernameKey(String usernameKey) {
+		this.usernameKey = usernameKey;
+	}
+    
+    
 
-    public void setUsernameKey(String usernameKey) {
-        this.usernameKey = usernameKey;
-    }
 }

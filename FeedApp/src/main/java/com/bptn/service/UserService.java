@@ -23,7 +23,7 @@ public class UserService {
 	
 	public void validateUserId(String username) throws InvalidUserNameException{
 		
-		List<UserID> userIDlist=userRepository.findbyUsername(username);
+		List<UserID> userIDlist=userRepository.findByUsername(username);
 		
 		if(userIDlist==null || userIDlist.isEmpty()) {
 			LOGGER.error("Username={) does not exist" ,username);

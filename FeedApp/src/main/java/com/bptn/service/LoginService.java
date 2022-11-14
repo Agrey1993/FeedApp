@@ -14,33 +14,31 @@ import com.bptn.repository.LoginRepository;
 @Service
 public class LoginService {
 	
-	private final Logger LOGGER=LoggerFactory.getLogger(this.getClass());
+    private final Logger LOGGER=LoggerFactory.getLogger(this.getClass());
 	
-@Autowired
-private LoginRepository loginRepository;
+	@Autowired
+	private LoginRepository loginRepository;
+	
+	 public String validateUserCredentials(UserID userCred) throws InvalidUserCredentialsException{
+		 List<UserID> userentity=loginRepository.getUserByUserId(userCred.getUsername());
+		 
+		 for(UserID u:userentity) {
+			 
+			 LOGGER.info("Retrieving username from the database");
+			 
+			 if(u.getUsername().equals(userCred.getUsername())) 
+				 
+				 if(u.getUserPassword().equals(userCred.getUserPassword())) 
+					 return "Login is successfull";
+				 else
+					 return "Password incorrect"+ new InvalidUserCredentialsException("Password is incorrect");
+				
+		 }
+		 return "User login issue" +new InvalidUserCredentialsException("User login is invalid");
+		 
+		 
+	 }
+	
+	
 
-public String validateUserCredentials(UserID userCred) throws InvalidUserCredentialsException{
-List<UserID> userentity=loginRepository.getUserByUserId(userCred.getUsername());
-
-for(UserID u:userentity) {
-	
-	LOGGER.info("Retrieving username from the database");
-	
-	if(u.getUsername().equals(userCred.getUsername())) 
-		
-		if(u.getPassword().equals(userCred.getPassword())) 
-			return "Login is successsfull";
-		
-		else
-		return "Password incorrect" + new InvalidUserCredentialsException("Password is incorrect");
 }
-	return "Username login issue" + new InvalidUserCredentialsException("User login is invalid");
-  }
-}
-
-
- 
-
-
-
-

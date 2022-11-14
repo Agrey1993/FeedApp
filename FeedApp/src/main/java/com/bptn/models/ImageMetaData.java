@@ -6,117 +6,107 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "\"imageMetaData\"")
-
+@Table(name="\"ImageMetaData\"")
 public class ImageMetaData {
-    @Id
-    @Column(name = "\"imageID\"")
-    private String imageID;
+	
+	    @Id
+	    @Column(name = "\"imageID\"")
+	    private String imageid;
 
-    @Column(name = "\"imageName\"")
-    private String imageName;
+	    @Column(name = "\"imageName\"")
+	    private String imagename;
 
-    @Column(name = "\"imageSize\"")
-    private String imageSize;
+	    @Column(name = "\"imageSize\"")
+	    private String imagesize;
 
-    @Column(name = "\"imageFormat\"")
-    private String imageFormat;
+	    @Column(name = "\"imageFormat\"")
+	    private String imageformat;
 
-    @Column(name = "\"imageDate\"")
-    private String imageDate;
+	    @Column(name = "\"imageDate\"")
+	    private String imagedate;
 
-    @Column(name = "\"resolution\"")
-    private String resolution;
+	    @Column(name = "\"resolution\"")
+	    private String resolution;
 
-    @Column(name = "\"postKey\"")
-    private String postKey;
+	    // Annotate for the foreign key
+	    @Column(name = "\"postKey\"")
+	    private String postkey;
 
+		public ImageMetaData() {
+			super();
+		}
 
-    public ImageMetaData() {
-        super();
-    }
+		public ImageMetaData(String imageid, String imagename, String imagesize, String imageformat, String imagedate,
+				String resolution, String postkey) {
+			super();
+			this.imageid = imageid;
+			this.imagename = imagename;
+			this.imagesize = imagesize;
+			this.imageformat = imageformat;
+			this.imagedate = imagedate;
+			this.resolution = resolution;
+			this.postkey = postkey;
+		}
 
-    public ImageMetaData(String imageID, String imageName, String imageSize, String imageFormat, String imageDate, String resolution, String postKey) {
+		public String getImageid() {
+			return imageid;
+		}
 
-//		parameterized constructor
-        this.imageID = imageID;
-        this.imageName = imageName;
-        this.imageSize = imageSize;
-        this.imageFormat = imageFormat;
-        this.imageDate = imageDate;
-        this.resolution = resolution;
-        this.postKey = postKey;
-    }
+		public void setImageid(String imageid) {
+			this.imageid = imageid;
+		}
 
-    //	getter for imageID
-    public String getImageID() {
-        return this.imageID;
-    }
+		public String getImagename() {
+			return imagename;
+		}
 
-    //	setter for ImageID
-    public void setImageID(String imageID) {
-        this.imageID = imageID;
-    }
+		public void setImagename(String imagename) {
+			this.imagename = imagename;
+		}
 
-    //	getter for imageName
-    public String getImageName() {
-        return this.imageName;
-    }
+		public String getImagesize() {
+			return imagesize;
+		}
 
-    //	setter for imageName
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
-    }
+		public void setImagesize(String imagesize) {
+			this.imagesize = imagesize;
+		}
 
-    //	getter for imageSize
-    public String getImageSize() {
-        return this.imageSize;
-    }
+		public String getImageformat() {
+			return imageformat;
+		}
 
-    //	setter for imageSize
-    public void setImageSize(String imageSize) {
-        this.imageSize = imageSize;
-    }
+		public void setImageformat(String imageformat) {
+			this.imageformat = imageformat;
+		}
 
-    //	getter for imageFormat
-    public String getImageFormat() {
-        return this.imageFormat;
-    }
+		public String getImagedate() {
+			return imagedate;
+		}
 
-    //	setter for imageFormat
-    public void setImageFormat(String imageFormat) {
-        this.imageFormat = imageFormat;
-    }
+		public void setImagedate(String imagedate) {
+			this.imagedate = imagedate;
+		}
 
-    //	getter for imageDate
-    public String getImageDate() {
-        return this.imageDate;
-    }
+		public String getResolution() {
+			return resolution;
+		}
 
-    //	setter for imageDate
-    public void setImageDate(String imageDate) {
-        this.imageDate = imageDate;
-    }
+		public void setResolution(String resolution) {
+			this.resolution = resolution;
+		}
 
-    //	getter for resolution
-    public String getResolution() {
-        return this.resolution;
-    }
+		public String getPostkey() {
+			return postkey;
+		}
 
-    //	setter for resolution
-    public void SetResolution(String resolution) {
-        this.resolution = resolution;
-    }
-
-    //	getter for postKey
-    public String getPostKey() {
-        return this.postKey;
-    }
-
-    //	setter for postKey
-    public void SetPostKey(String postKey) {
-        this.postKey = postKey;
-    }
-
+		public void setPostkey(String postkey) {
+			this.postkey = postkey;
+		}
+	    
+	    
+	
+	
+	
 
 }

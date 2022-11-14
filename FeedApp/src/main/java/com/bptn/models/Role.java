@@ -7,7 +7,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "\"Role\"")
-
 public class Role {
 
     @Column(name = "\"role\"")
@@ -21,53 +20,52 @@ public class Role {
 
     @Id
     @Column(name = "\"usernameKey\"")
-    private String usernameKey;
+    private String username;
 
-    //  constructors
-    public Role() {
-        super();
-    }
+	public Role() {
+		super();
+	}
 
-    //  parameterized constructors
-    public Role(String role, String company, String skills, String usernameKey) {
-        this.role = role;
-        this.company = company;
-        this.skills = skills;
-        this.usernameKey = usernameKey;
-    }
+	public Role(String role, String company, String skills, String username) {
+		super();
+		this.role = role;
+		this.company = company;
+		this.skills = skills;
+		this.username = username;
+	}
 
+	public String getRole() {
+		return role;
+	}
 
-    //    getters
-    public String getRole() {
-        return role;
-    }
+	public void setRole(String role) {
+		this.role = role;
+	}
 
-    public String getCompany() {
-        return company;
-    }
+	public String getCompany() {
+		return company;
+	}
 
-    public String getSkills() {
-        return skills;
-    }
+	public void setCompany(String company) {
+		this.company = company;
+	}
 
-    public String getUsernameKey() {
-        return usernameKey;
-    }
+	public String getSkills() {
+		return skills;
+	}
 
-    //    setters
-    public void setRole(String role) {
-        this.role = role;
-    }
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setSkills(String skills) {
-        this.skills = skills;
-    }
-
-    public void setUsernameKey(String usernameKey) {
-        this.usernameKey = usernameKey;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
+    
+    
+    
 }
